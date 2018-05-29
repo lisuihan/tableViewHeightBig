@@ -22,11 +22,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationController.navigationBar.hidden = YES;
+//    self.navigationController.navigationBar.hidden = YES;
     
     self.imgHeight = 200 / ([UIScreen mainScreen].bounds.size.height/[UIScreen mainScreen].bounds.size.width);
     
-    _tabbleview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0,  [UIScreen mainScreen].bounds.size.width,  [UIScreen mainScreen].bounds.size.height) style:UITableViewStyleGrouped];
+    _tabbleview = [[UITableView alloc] initWithFrame:CGRectMake(0, 64,  [UIScreen mainScreen].bounds.size.width,  [UIScreen mainScreen].bounds.size.height) style:UITableViewStyleGrouped];
     _tabbleview.delegate = self;
     _tabbleview.dataSource = self;
     _tabbleview.rowHeight = 50;
@@ -35,7 +35,7 @@
     
     
      UIImageView *img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"image"]];
-    img.frame =CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, _imgHeight);
+    img.frame =CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, _imgHeight);
     self.imgView = img;
     img.userInteractionEnabled = YES;
     [self.view addSubview:img];
@@ -58,8 +58,10 @@
     static NSString *cellId = @"cellId";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
     }
+    cell.textLabel.text = @"nihao";
+    cell.detailTextLabel.text = @"你好";
     return cell;
 }
 
@@ -73,7 +75,7 @@
         CGFloat height = self.imgRect.size.height - scrollY ;
         CGFloat width =  (height/200) * [UIScreen mainScreen].bounds.size.height;
         CGFloat x = self.imgRect.origin.x - (width - self.imgRect.size.width)/2;
-        _imgView.frame = CGRectMake(x, 0, width, height);
+        _imgView.frame = CGRectMake(x, 64, width, height);
     }else{
 //
         CGRect frame = self.imgRect;

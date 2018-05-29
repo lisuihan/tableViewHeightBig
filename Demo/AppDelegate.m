@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-
+#import "SeconddViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -24,9 +24,14 @@
     nav.tabBarItem.image = [UIImage imageNamed:@""];
     nav.tabBarItem.title = @"你好";
     
+    SeconddViewController *vc1 = [[SeconddViewController alloc] init];
+    UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:vc1];
+    nav1.tabBarItem.image = [UIImage imageNamed:@""];
+    nav1.tabBarItem.title = @"我好";
+    
     UITabBarController *barVC = [[UITabBarController alloc] init];
     [barVC addChildViewController:nav];
-    
+    [barVC addChildViewController:nav1];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = barVC;

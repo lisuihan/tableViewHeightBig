@@ -14,6 +14,7 @@
 		846C5CDF20BBDCA600CF41FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846C5CDD20BBDCA600CF41FD /* LaunchScreen.storyboard */; };
 		846C5CE220BBDCA600CF41FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C5CE120BBDCA600CF41FD /* main.m */; };
 		846C5CED20BBF54800CF41FD /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 846C5CEC20BBF54800CF41FD /* image.png */; };
+		84971E7520BCF622002A49C3 /* SeconddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84971E7420BCF622002A49C3 /* SeconddViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		846C5CE020BBDCA600CF41FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		846C5CE120BBDCA600CF41FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		846C5CEC20BBF54800CF41FD /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
+		84971E7320BCF622002A49C3 /* SeconddViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeconddViewController.h; sourceTree = "<group>"; };
+		84971E7420BCF622002A49C3 /* SeconddViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeconddViewController.m; sourceTree = "<group>"; };
 		8639277B573B622B50FD62AD /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -87,6 +90,8 @@
 				846C5CD320BBDCA400CF41FD /* AppDelegate.m */,
 				846C5CD520BBDCA400CF41FD /* ViewController.h */,
 				846C5CD620BBDCA400CF41FD /* ViewController.m */,
+				84971E7320BCF622002A49C3 /* SeconddViewController.h */,
+				84971E7420BCF622002A49C3 /* SeconddViewController.m */,
 				846C5CDB20BBDCA600CF41FD /* Assets.xcassets */,
 				846C5CDD20BBDCA600CF41FD /* LaunchScreen.storyboard */,
 				846C5CE020BBDCA600CF41FD /* Info.plist */,
@@ -209,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				846C5CD720BBDCA400CF41FD /* ViewController.m in Sources */,
+				84971E7520BCF622002A49C3 /* SeconddViewController.m in Sources */,
 				846C5CE220BBDCA600CF41FD /* main.m in Sources */,
 				846C5CD420BBDCA400CF41FD /* AppDelegate.m in Sources */,
 			);
