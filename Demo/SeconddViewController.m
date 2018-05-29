@@ -10,15 +10,45 @@
 
 @interface SeconddViewController ()
 
+@property (nonatomic,copy) NSArray *pageContentArray;
+@property (nonatomic,strong) UIPageViewController *pageViewController;
 @end
 
+
+
 @implementation SeconddViewController
+
+
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    NSDictionary *dict = @{UIPageViewControllerOptionSpineLocationKey : @(UIPageViewControllerSpineLocationMin)};
+    
+    _pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl navigationOrientation:UIPageViewControllerNavigationOrientationVertical options:dict];
     // Do any additional setup after loading the view.
 }
+
+#pragma mark - Lazy Load
+
+- (NSArray *)pageContentArray {
+    if (!_pageContentArray) {
+        NSMutableArray *arrayM = [[NSMutableArray alloc] init];
+        for (int i = 1; i < 10; i++) {
+            NSString *contentString = [[NSString alloc] initWithFormat:@"This is the page %d of content displayed using UIPageViewController", i];
+            [arrayM addObject:contentString];
+        }
+        _pageContentArray = [[NSArray alloc] initWithArray:arrayM];
+        
+    }
+    return _pageContentArray;
+}
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

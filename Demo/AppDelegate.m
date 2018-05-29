@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "SeconddViewController.h"
+#import "ThreeViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -29,9 +31,17 @@
     nav1.tabBarItem.image = [UIImage imageNamed:@""];
     nav1.tabBarItem.title = @"我好";
     
+    ThreeViewController *vc2 = [[ThreeViewController alloc] init];
+    UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:vc2];
+    nav2.tabBarItem.image = [UIImage imageNamed:@""];
+    nav2.tabBarItem.title = @"他好";
+    
+    
     UITabBarController *barVC = [[UITabBarController alloc] init];
     [barVC addChildViewController:nav];
     [barVC addChildViewController:nav1];
+    [barVC addChildViewController:nav2];
+    
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = barVC;
